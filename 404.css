@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto Mono");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", sans-serif;
+  
+  cursor: auto;
+}
+
+body{
+  color: white;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.side-navbar {
+  height: 100%;
+  position: fixed;
+  width: 70px;
+  z-index: 1;
+  background-color: #161616;
+  overflow-x: hidden;
+  outline: none;
+  border: none;
+  padding-top: 20px;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  overflow-y: visible;
+}
+
+.side-navbar::-webkit-scrollbar, .side-navbar::-webkit-scrollbar-track,  .side-navbar::-webkit-scrollbar-thumb{
+  display: none;
+}
+
+.side-navbar a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+}
+
+body > div > a:nth-child(7) > ion-icon {
+  margin-top: 9vh;
+}
+
+body > div > a:nth-child(1) {
+  margin-bottom: 13vh;
+}
+
+.side-navbar a img:hover,.side-navbar a ion-icon:hover{
+  color: #d22222 !important;
+  cursor: pointer;
+}
+
+.background-area {
+  display: inline-block;
+  background-color: #1b191c;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.content-area{
+  margin-left: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 35vh;
+}
+
+@media all and (max-width: 1005px) {
+  .background-area {
+    height: fit-content;
+  }
+
+  h1{
+    font-size: 25px;
+  }
+}
+
+@media all and (max-width: 858px) {
+  .intro{
+    margin-bottom: 70px;
+  }
+
+  .content-area{
+    margin-left: 15vw;
+  }
+
+}

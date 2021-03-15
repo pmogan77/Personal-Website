@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - 404</title>
+    <link rel="stylesheet" href="404.css" />
+    <link rel="shortcut icon" type="image/png" href="/initials.png" />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="side-navbar">
+        <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
+        <a href="/"><ion-icon name="home-outline"></ion-icon></a>
+        <a href="/about"><ion-icon name="person-outline"></ion-icon></a>
+        <a href="/skills"><ion-icon name="construct-outline"></ion-icon></a>
+        <a href="/projects"><ion-icon name="code-slash-outline"></ion-icon></a>
+        <a href="/contact"><ion-icon name="mail-outline"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/praveen-mogan/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/pmogan77" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+
+    <div class="background-area">
+      <div class="content-area">
+        <div class='404_container'>
+            <h1 style="color: red; font-size: 100px;">404</h1>
+            <h1 class="not_found">Page not found</h1>
+            <br>
+            <h1 class="broken">The link you clicked may be broken or the page may have been removed.</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script>
+        const tl = gsap.timeline({defaults: {ease: "power1.out"}});
+        tl.from('.side-navbar', {translateX: '-200px', duration: 1});
+        tl.from('h1', {opacity: 0, translateY: '-50px', duration: 1, stagger: .25});
+    </script>
+
+  </body>
+</html>

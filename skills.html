@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Skills</title>
+    <link rel="stylesheet" href="skills.css" />
+    <link rel="shortcut icon" type="image/png" href="/initials.png" />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='./svgtagcloud.js'></script>
+
+    <script>
+
+    	$( document ).ready( function() {
+
+            var entries = [ 
+                
+                { label: 'Node.js', url: 'https://nodejs.org/en/', target: '_blank' },
+                { label: 'Javascript (ES6/ES5)', url: 'https://www.javascript.com/', target: '_blank' },
+                { label: 'MonkeyLearn API', url: 'https://monkeylearn.com/', target: '_blank' },
+                { label: 'Dialogflow', url: 'https://cloud.google.com/dialogflow', target: '_blank' },
+                { label: 'Java', url: 'https://www.java.com/en/', target: '_blank' },
+                { label: 'Python', url: 'https://www.python.org/', target: '_blank' },
+                { label: 'JavaFX', url: 'https://openjfx.io/', target: '_blank' },
+                { label: 'TomTom API', url: 'https://developer.tomtom.com/', target: '_blank' },
+                { label: 'Firebase', url: 'https://firebase.google.com/', target: '_blank' },
+                { label: 'Puppeteer', url: 'https://pptr.dev/', target: '_blank' },
+                { label: 'HTML/CSS', url: 'https://www.w3.org/standards/webdesign/htmlcss.html', target: '_blank' },                
+                { label: 'JSDOM', url: 'https://github.com/jsdom/jsdom/blob/master/README.md', target: '_blank' },
+                { label: 'Cloud FireStore', url: 'https://firebase.google.com/docs/firestore', target: '_blank' },
+                { label: 'Heroku', url: 'https://heroku.com', target: '_blank' },
+                { label: 'NPM', url: 'https://www.npmjs.com/', target: '_blank' },
+                { label: 'Fetch API', url: 'https://developers.google.com/web/updates/2015/03/introduction-to-fetch', target: '_blank' },
+                { label: 'Express.js', url: 'https://expressjs.com/', target: '_blank' },
+                { label: 'JSON', url: 'https://www.json.org/json-en.html', target: '_blank' },
+                { label: 'Google Search API', url: 'https://developers.google.com/custom-search/', target: '_blank' }
+            ];
+
+            var settings = {
+
+                entries: entries,
+                radius: '65%',
+                radiusMin: 75,
+                bgDraw: false,
+                opacityOver: 1.00,
+                opacityOut: 0.25,
+                opacitySpeed: 6,
+                fov: 800,
+                speed: 1,
+                fontSize: '15',
+                fontColor: 'red',
+                fontWeight: 'bold',//bold
+                fontStyle: 'normal',//italic 
+                fontStretch: 'expanded',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true
+
+            };
+            $( '#holder' ).svg3DTagCloud( settings );
+
+		} );
+        
+    </script>
+
+
+
+  </head>
+  <body>
+    <div class="side-navbar">
+        <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
+        <a href="/"><ion-icon name="home-outline"></ion-icon></a>
+        <a href="/about"><ion-icon name="person-outline"></ion-icon></a>
+        <a href="/skills"><ion-icon name="construct-outline"></ion-icon></a>
+        <a href="/projects"><ion-icon name="code-slash-outline"></ion-icon></a>
+        <a href="/contact"><ion-icon name="mail-outline"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/praveen-mogan/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/pmogan77" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+
+    <div class="background-area">
+      <div class="content-area">
+        <div class='skills_container'>
+
+            <h1><span style="text-decoration: underline;">Skills</span>(): </h1>
+            <span class="row">
+                <li>Frontend development</li>
+                <li>Applet development</li>
+                <li>Backend development</li>
+            </span>
+            <span class="row">
+                <li>UX/UI</li>
+                <li>Analysis</li>
+                <li>Leading</li>
+                
+            </span>
+
+            <h1><span style="text-decoration: underline;">Experience</span>(): </h1>
+            <span class="row">
+                <li>College TBD (2021-2025)</li>
+                <li>Waste Management Internship (2020)</li>
+                <li>Obra D. Tompkins HS (2017-2021)</li>
+            </span>
+
+            <h1><span style="text-decoration: underline;">Languages</span>(): </h1>
+            <span class="row">
+                <li>English (native)</li>
+                <li>Tamil (native)</li>
+                <li>Spanish (intermediate)</li>
+            </span>
+
+            <h1><span style="text-decoration: underline;">Also Busy With</span>(): </h1>
+            <span class="row">
+                <li>Tennis</li>
+                <li>Stringing</li>
+                <li>Video games</li>
+                <li>Chess</li>
+            </span>
+            
+        </div>
+        <div class="lang_container">
+            <h1 style="color: red; text-align: center;"><span style="text-decoration: none;">Tools</span>():</h1>
+            <div id='holder'></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script>
+        const tl = gsap.timeline({defaults: {ease: "power1.out"}});
+        tl.from('.side-navbar', {translateX: '-200px', duration: 1});
+        tl.from('.skills_container', {translateY: '-1000px', duration: 1});
+        tl.from('h1', {opacity: 0, translateX: '-200px', duration: 2, stagger: .25});
+        tl.from('li', {opacity: 0, duration: 2, stagger: .05})
+        tl.from('#holder', {opacity: 0, duration: 2, stagger: .05}, '-=4');
+    </script>
+    
+  </body>
+</html>

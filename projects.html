@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Projects</title>
+    <link rel="stylesheet" href="projects.css" />
+    <link rel="shortcut icon" type="image/png" href="/initials.png" />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+
+  </head>
+  <body>
+    <div class="side-navbar">
+        <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
+        <a href="/"><ion-icon name="home-outline"></ion-icon></a>
+        <a href="/about"><ion-icon name="person-outline"></ion-icon></a>
+        <a href="/skills"><ion-icon name="construct-outline"></ion-icon></a>
+        <a href="/projects"><ion-icon name="code-slash-outline"></ion-icon></a>
+        <a href="/contact"><ion-icon name="mail-outline"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/praveen-mogan/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/pmogan77" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+
+    <div class="background-area">
+      <div class="content-area">
+
+        <h1 style="color: #d22222; margin-top: 30px; margin-bottom: 30px;">Projects()</h1>
+
+        <div class='projects_container'>
+
+        
+            <div class="projectCard">
+                <img src="/img/medlogo.png" width="200px" style="border-radius: 0%;"></img>
+                <div class="row">
+                    <h2 style="color: #d22222; font-weight: bolder; font-size: 35px;">Medical Application</h2>
+                    <h3 style="color: rgba(255, 255, 255, 0.36);">//2021 - CS3</h3>
+                    <p>Developed a website to provide medical info. & diagnoses.</p>
+                </div>
+            </div>
+
+            <div class="projectCard">
+                <img src="/img/edulogo.png" width="200px"></img>
+                <div class="row">
+                    <h2 style="color: #d22222; font-weight: bolder; font-size: 35px;">EduPortal</h2>
+                    <h3 style="color: rgba(255, 255, 255, 0.36);">//2021 - OISM</h3>
+                    <p>Developed a personalized education system with admin access.</p>
+                </div>
+            </div>
+            
+            <div class="projectCard">
+                <img src="/img/vocablogo.png" width="200px"></img>
+                <div class="row">
+                    <h2 style="color: #d22222; font-weight: bolder; font-size: 35px;">Vocab Scraper</h2>
+                    <h3 style="color: rgba(255, 255, 255, 0.36);">//2021 - Personal</h3>
+                    <p>Developed a website to scrape and store vocab information.</p>
+                </div>
+            </div>
+
+            <div class="projectCard">
+                <img src="/img/pclogo.png" width="200px"></img>
+                <div class="row">
+                    <h2 style="color: #d22222; font-weight: bolder; font-size: 35px;">Store Price Comparision</h2>
+                    <h3 style="color: rgba(255, 255, 255, 0.36);">//2020 - CS3</h3>
+                    <p>Developed a website to search, sort, and manage products.</p>
+                </div>
+            </div>
+  
+            <div class="projectCard">
+                <img src="/img/covid.png" width="200px"></img>
+                <div class="row">
+                    <h2 style="color: #d22222; font-weight: bolder; font-size: 35px;">COVID: Support Application</h2>
+                    <h3 style="color: rgba(255, 255, 255, 0.36);">//2020 - Helix Hackathon</h3>
+                    <p>Developed a quarantine support applet.</p>
+                </div>
+            </div>
+           
+        </div>
+       
+      </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.projectCard').forEach(element =>{
+            element.addEventListener('click', event =>{
+                var selected = event.target.closest('.projectCard').innerText.split('\n')[0];
+
+                var mapLinks = new Map();
+                mapLinks.set('EduPortal', '/eduportal');
+                mapLinks.set('Store Price Comparision', '/store');
+                mapLinks.set('Medical Application', '/medical');
+                mapLinks.set('Vocab Scraper', '/vocab');
+                mapLinks.set('COVID: Support Application', '/covid');
+
+                window.location = mapLinks.get(selected);
+            })
+        })
+    </script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script>
+        const tl = gsap.timeline({defaults: {ease: "power1.out"}});
+        tl.from('.side-navbar', {translateX: '-200px', duration: 1});
+        tl.from('h1', {opacity: 0, translateY: '-100px', duration: 1});
+        tl.from('.projectCard', {opacity: 0, translateY: '-100px',duration: .75, stagger: .5})
+    </script>
+
+  </body>
+</html>
