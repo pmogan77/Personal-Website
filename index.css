@@ -105,6 +105,10 @@ body > div > a:nth-child(1) {
   position: relative;
 }
 
+.loading{
+  text-align: center;
+}
+
 .model{
   position: absolute;
   /* border: 2px solid red; */
