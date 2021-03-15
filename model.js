@@ -69,6 +69,7 @@ window.addEventListener('resize', function(){
     // controls.handleResize();
 })
 
+console.log('loading');
 
 const loader = new GLTFLoader();
 
@@ -94,6 +95,8 @@ loader.load(
 
 		//   var worldAxis = new THREE.AxesHelper(20);
   		// model.add(worldAxis);
+
+		  console.log('loading finished');
 
 		renderer.outputEncoding = THREE.sRGBEncoding;
 
