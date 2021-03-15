@@ -107,6 +107,13 @@ body > div > a:nth-child(1) {
 
 .loading{
   text-align: center;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .model{
