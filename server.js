@@ -171,20 +171,20 @@ app.get(["/covid","/covid.html"], (req,res)=>{
       }); 
 })
 
-app.get(["/test","/test.html"], (req,res)=>{
+// app.get(["/test","/test.html"], (req,res)=>{
 
-      fs.readFile(startPath + '/test.html', "utf-8", (err, data) => {
-            if (err) {
-                  console.log(err);
-                  res.redirect('/404');
-            }
-            else
-            {
-                  res.writeHead(200, { "Content-type": "text/html" });
-                  res.end(data);
-            }
-      }); 
-})
+//       fs.readFile(startPath + '/test.html', "utf-8", (err, data) => {
+//             if (err) {
+//                   console.log(err);
+//                   res.redirect('/404');
+//             }
+//             else
+//             {
+//                   res.writeHead(200, { "Content-type": "text/html" });
+//                   res.end(data);
+//             }
+//       }); 
+// })
 
 app.get([/\.(bin)$/i,/\.(gltf)$/i,/\.(glb)$/i], (req,res)=>{
       fs.readFile("./" + req.originalUrl, (err, data) => {
