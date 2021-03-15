@@ -78,7 +78,8 @@
           const tl = gsap.timeline({defaults: {ease: "power1.out"}});
           tl.from('.side-navbar', {translateX: '-200px', duration: 1});
           tl.to('.side-navbar a', {opacity: '1', duration: 1, stagger: .25});
-          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=3');
+          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
+          tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
       }
       else{
           const tl = gsap.timeline({defaults: {ease: "power1.out"}});
@@ -88,7 +89,8 @@
           tl.to('.intro', {y: "-100%", duration: 1}, "-=1");
           tl.from('.side-navbar', {translateX: '-200px', duration: 1});
           tl.to('.side-navbar a', {opacity: '1', duration: 1, stagger: .25});
-          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=3');
+          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
+          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
           sessionStorage.setItem('visited', true);
       }
       

@@ -24,15 +24,6 @@ renderer.setSize(width, height);
 
 container.appendChild(renderer.domElement);
 
-window.addEventListener('resize', function(){
-	var Width = container.clientWidth;
-    var Height = container.clientHeight;
-    renderer.setSize(Width, Height);
-    camera.aspect = Width / Height;
-    camera.updateProjectionMatrix();
-    controls.handleResize();
-})
-
 //entire object
 var hlight = new THREE.AmbientLight (0xd22222,100);
 scene.add(hlight);
@@ -68,6 +59,15 @@ controls.addEventListener('change', render);
 controls.enableZoom = true;
 controls.enablePan = false;
 controls.enableRotate = true;
+
+window.addEventListener('resize', function(){
+	var Width = container.clientWidth;
+    var Height = container.clientHeight;
+    renderer.setSize(Width, Height);
+    camera.aspect = Width / Height;
+    camera.updateProjectionMatrix();
+    // controls.handleResize();
+})
 
 
 const loader = new GLTFLoader();
