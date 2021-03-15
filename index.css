@@ -78,7 +78,15 @@ body > div > a:nth-child(1) {
 
 
 
+canvas{
+  cursor: -webkit-grab; 
+  cursor: grab;
+}
 
+canvas:active{
+  cursor: -webkit-grabbing; 
+  cursor: grabbing;
+}
 
 
 
