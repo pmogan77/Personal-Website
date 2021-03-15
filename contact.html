@@ -76,7 +76,7 @@
     <script>
         const tl = gsap.timeline({defaults: {ease: "power1.out"}});
         tl.from('.side-navbar', {translateX: '-200px', duration: 1});
-        tl.from('.contact_container', {opacity: 0, translateX: '-500px', duration: 1});
+        tl.from('.contact_container', {opacity: 0, translateX: '-500px', duration: 1}, '+=1');
         tl.from('h1, h4', {opacity: 0, translateY: '-50px', duration: .5});
         tl.from('input[type="text"], input[type="email"], textarea, input[type="submit"]', {opacity: 0, translateY: '-50px', duration: .25, stagger: .25});
     </script>
