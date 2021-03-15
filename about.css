@@ -110,8 +110,24 @@ h4 {
     flex-wrap: wrap;
 }
 
+a { color: inherit; text-decoration: none;} 
+
+.resume{
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  cursor: pointer;
+  border-bottom: 2px solid #d22222;
+  transition: all .3s ease 0s;
+}
+
+.resume:hover{
+  padding-bottom: 5px;
+
+}
+
 .aboutContainer h4{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .aboutSquare{
