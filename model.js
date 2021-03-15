@@ -95,7 +95,9 @@ loader.load(
 		//   var worldAxis = new THREE.AxesHelper(20);
   		// model.add(worldAxis);
 
-		renderer.outputEncoding = THREE.sRGBEncoding
+		renderer.outputEncoding = THREE.sRGBEncoding;
+
+		document.querySelector('.loading').remove();
 
 		gameLoop();
 	},
