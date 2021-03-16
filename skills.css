@@ -93,7 +93,8 @@ body > div > a:nth-child(1) {
 .lang_container{
     width: 500px;
     height: 500px;
-    margin-top: 50px;
+    top: 50px;
+    position: sticky;
 }
 
 .skills_container {
@@ -107,6 +108,14 @@ body > div > a:nth-child(1) {
 @media all and (max-width: 1005px) {
   h1 {
     font-size: 25px;
+  }
+}
+
+@media all and (max-width: 1125px) {
+  .lang_container{
+    position: relative;
+    margin-top: 50px;
+    top: 0px;
   }
 }
 
