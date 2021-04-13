@@ -43,12 +43,19 @@ body{
   overflow-y: visible;
 }
 
+.navbarContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .side-navbar::-webkit-scrollbar, .side-navbar::-webkit-scrollbar-track,  .side-navbar::-webkit-scrollbar-thumb{
   display: none;
 }
 
 .side-navbar a {
-  padding: 10px 20px 10px 20px;
+  padding: 2vh 20px 2vh 20px;
   text-decoration: none;
   font-size: 25px;
   display: block;
@@ -56,12 +63,8 @@ body{
   color: white;
 }
 
-body > div > a:nth-child(7) > ion-icon {
-  margin-top: 9vh;
-}
-
-body > div > a:nth-child(1) {
-  margin-bottom: 13vh;
+.side-navbar .nav3 a{
+  padding: 1vh 20px 1vh 20px;
 }
 
 .side-navbar a img:hover,.side-navbar a ion-icon:hover{
