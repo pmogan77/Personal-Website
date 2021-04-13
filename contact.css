@@ -157,6 +157,7 @@ body {
   padding: 30px;
   width: min-content;
   overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 @media all and (max-width: 1005px) {

@@ -99,7 +99,7 @@ body {
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  
+  overflow-wrap: anywhere;
 }
 
 @media all and (max-width: 1005px) {
@@ -109,8 +109,8 @@ body {
 }
 
 @media all and (max-width: 858px) {
-  .content-area {
-    margin-left: 15vw;
+  .content-area, .typed {
+    margin-left: 15vw !important;
   }
 }
 
