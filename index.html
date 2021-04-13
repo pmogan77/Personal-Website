@@ -103,7 +103,7 @@
           document.querySelector('.slider').remove();
           const tl = gsap.timeline({defaults: {ease: "power1.out"}});
           tl.from('.side-navbar', {translateX: '-200px', duration: 1});
-          tl.to('.side-navbar a', {opacity: '1', duration: 1, stagger: .25});
+          tl.to('.nav1 a,.nav2 a,.nav3 a', {opacity: '1', duration: 1, stagger: .25});
           tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
           tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
           tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1}, '-=5');
@@ -115,7 +115,7 @@
           tl.to('.slider', {y:"-100%", duration: 1.5, delay: 0.5});
           tl.to('.intro', {y: "-100%", duration: 1}, "-=1");
           tl.from('.side-navbar', {translateX: '-200px', duration: 1});
-          tl.to('.side-navbar a', {opacity: '1', duration: 1, stagger: .25});
+          tl.to('.navbarContainer a', {opacity: '1', duration: 1, stagger: .25});
           tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
           tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
           tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');

@@ -215,3 +215,7 @@ canvas:active{
   display: inline-block;
   transform: translateY(100%);
 }
+
+.navbarContainer a{
+  opacity: 0;
+}
