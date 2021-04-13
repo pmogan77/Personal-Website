@@ -19,7 +19,7 @@ app.get(["/robots.txt","/robots"], (req,res)=>{
                   res.end(data);
             }
       }); 
-  })
+})
 
 app.get(["/","/index.html", "/index"], (req,res)=>{
 
