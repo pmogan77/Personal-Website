@@ -6,6 +6,21 @@ const url = require("url");
 var PORT = process.env.PORT || 3000;
 const startPath = `${__dirname}`;
 
+app.get(["/robots.txt","/robots"], (req,res)=>{
+
+      fs.readFile(startPath + '/robots.txt', "utf-8", (err, data) => {
+            if (err) {
+                  console.log(err);
+                  res.redirect('/404');
+            }
+            else
+            {
+                  res.writeHead(200, { "Content-type": "text/plain" });
+                  res.end(data);
+            }
+      }); 
+  })
+
 app.get(["/","/index.html", "/index"], (req,res)=>{
 
     fs.readFile(startPath + '/index.html', "utf-8", (err, data) => {
