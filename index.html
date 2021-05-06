@@ -22,6 +22,17 @@
     <div class="side-navbar">
       <div class="navbarContainer">
 
+        <div class="mobile_nav">
+          <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
+          <a href="/"><ion-icon name="home-outline" style="color: red;"></ion-icon></a>    
+          <a href="/about"><ion-icon name="person-outline"></ion-icon></a>
+          <a href="/skills"><ion-icon name="construct-outline"></ion-icon></a>
+          <a href="/projects"><ion-icon name="code-slash-outline"></ion-icon></a>
+          <a href="/contact"><ion-icon name="mail-outline"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/praveen-mogan/" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://github.com/pmogan77" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-github"></ion-icon></a>
+        </div>
+
         <div class="nav1">
           <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
         </div>
@@ -70,7 +81,7 @@
           <span class="text">and developing</span>
         </h1>
         <h1 class="hide">
-          <span class="text">for the future.</span>
+          <span class="text">through &#60;code&#62;</span>
         </h1>
 
       </div>
@@ -97,31 +108,59 @@
     </script>
     <script>
 
-      if(sessionStorage.getItem('visited') && sessionStorage.getItem('visited')=='true')
+      if(false&&sessionStorage.getItem('visited') && sessionStorage.getItem('visited')=='true')
       {
+        
+          
           document.querySelector('.intro').remove();
           document.querySelector('.slider').remove();
           const tl = gsap.timeline({defaults: {ease: "power1.out"}});
-          tl.from('.side-navbar', {translateX: '-200px', duration: 1});
-          tl.to('.nav1 a,.nav2 a,.nav3 a', {opacity: '1', duration: 1, stagger: .25});
-          tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
-          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
-          tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1}, '-=5');
+          if(window.innerWidth<=500){
+            var fromText = '-100vw';   
+            tl.from('.side-navbar', {translateX: fromText, duration: 1});
+            tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1});
+          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1});
+          tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1});
+            
+          }
+          else{
+            var fromText = '-200px';   
+            tl.from('.side-navbar', {translateX: fromText, duration: 1});
+            tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1});
+          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1});
+          tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1});
+          }
+          
+          
       }
       else{
-          const tl = gsap.timeline({defaults: {ease: "power1.out"}});
 
+          
+          const tl = gsap.timeline({defaults: {ease: "power1.out"}});
+          
           tl.to('.text', {y:'0%', duration: 1.5, stagger: 0.5});
           tl.to('.slider', {y:"-100%", duration: 1.5, delay: 0.5});
           tl.to('.intro', {y: "-100%", duration: 1}, "-=1");
-          tl.from('.side-navbar', {translateX: '-200px', duration: 1});
-          tl.to('.navbarContainer a', {opacity: '1', duration: 1, stagger: .25});
-          tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
-          tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
-          tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1}, '-=2');
-          sessionStorage.setItem('visited', true);
+          
+          if(window.innerWidth<=500){
+            var fromText = '-100vw';   
+            tl.from('.side-navbar', {translateX: fromText, duration: 1});
+            tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1});
+            tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1});
+            tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1});
+            sessionStorage.setItem('visited', true);
+          }
+          else{
+            var fromText = '-200px'; 
+            tl.from('.side-navbar', {translateX: fromText, duration: 1});  
+            tl.fromTo('.loading', {opacity: 0}, {opacity: 1, duration: 1});
+            tl.fromTo('.introToMe', {opacity: 0}, {opacity: 1, duration: 1});
+            tl.fromTo('.model', {opacity: 0}, {opacity: 1, duration: 1});
+            sessionStorage.setItem('visited', true);
+          }
+          
+          
       }
-      
 
 
     </script>

@@ -84,6 +84,18 @@
     <div class="side-navbar">
       <div class="navbarContainer">
 
+
+        <div class="mobile_nav">
+          <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
+          <a href="/"><ion-icon name="home-outline"></ion-icon></a>    
+          <a href="/about"><ion-icon name="person-outline"></ion-icon></a>
+          <a href="/skills"><ion-icon name="construct-outline" style="color: red;"></ion-icon></a>
+          <a href="/projects"><ion-icon name="code-slash-outline"></ion-icon></a>
+          <a href="/contact"><ion-icon name="mail-outline"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/praveen-mogan/" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://github.com/pmogan77" target="_blank" rel="noreferrer noopener"><ion-icon name="logo-github"></ion-icon></a>
+        </div>
+
         <div class="nav1">
           <a href="/"><img src="initials.png" alt="Logo" width="27px" /></a>
         </div>
@@ -130,8 +142,8 @@
             <h1><span style="text-decoration: underline;">Stats</span>(): </h1>
             <span class="row">
                 <li>SAT: 1550 (800M - 750RW)</li>
-                <li>Rank: 4/934</li>
-                <li>GPA: 4.8413</li>
+                <li>Rank: 6/934</li>
+                <li>GPA: 4.8429</li>
             </span>
 
             <h1><span style="text-decoration: underline;">Languages</span>(): </h1>
@@ -160,8 +172,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
     <script>
         const tl = gsap.timeline({defaults: {ease: "power1.out"}});
-        tl.from('.side-navbar', {translateX: '-200px', duration: 1});
-        tl.from('.skills_container', {translateY: '-1000px', duration: 1});
+        if(window.innerWidth<=500){
+          tl.from('.side-navbar', {translateY: '-200px', duration: 1});
+        }
+        else{
+          tl.from('.side-navbar', {translateX: '-200px', duration: 1});
+        }
+        tl.from('.skills_container', {translateY: '-2000px', duration: 1.5});
         tl.from('h1', {opacity: 0, translateX: '-200px', duration: 2, stagger: .25});
         tl.from('li', {opacity: 0, duration: 2, stagger: .05})
         tl.from('#holder', {opacity: 0, duration: 2, stagger: .05}, '-=4');

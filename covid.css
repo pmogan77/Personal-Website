@@ -155,3 +155,65 @@ h4 {
   display: inline;
   word-break: break-all;
 }
+
+.mobile_nav{
+  display: none;
+  position: sticky;
+}
+
+@media all and (max-width: 500px) {
+
+  .mobile_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .side-navbar a{
+    padding: 0%;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .side-navbar {
+    z-index: 1;
+    overflow-x: scroll;
+    outline: none;
+    border: none;
+    overflow-y: hidden;
+    height: 70px;
+    width: 100vw;
+  }
+
+  .nav1{
+    display: none;
+  }
+
+  .nav2{
+    display: none;
+  }
+
+  .nav3{
+    display: none;
+  }
+
+  .content-area{
+    margin-left: 0px !important;
+    position: relative;
+    margin-top: 0vh;
+  }
+
+  .groupCol{
+    margin-right: 0px !important;
+  }
+
+  .typed{
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+    padding: 20px;
+    margin-top: 10vh !important;
+  }
+}
