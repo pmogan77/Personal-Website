@@ -1,0 +1,26 @@
+{
+    "name": "Praveen Mogan Portfolio",
+    "short_name": "Praveen",
+    "start_url": ".",
+    "background_color": "#1b191c",
+    "theme_color": "#d22222",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "initials512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "initials250.png",
+            "sizes": "250x250",
+            "type": "image/png"
+        },
+        {
+            "src": "maskable_icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+          }
+    ]
+}

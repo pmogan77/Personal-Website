@@ -245,6 +245,22 @@ app.get(/\.(jpg|jpeg|png|gif|mp4|ogg)$/i, (req,res)=>{
     });
 })
 
+app.get(/\.(json)$/i, (req,res)=>{
+
+      console.log(req.originalUrl);
+  
+      fs.readFile(startPath + req.originalUrl, (err, data) => {
+            if (err) {
+                  console.log(err);
+                  res.redirect('/404');
+            }
+            else{
+                  res.writeHead(200, { "Content-type": "application/json" });
+                  res.end(data);
+            }
+      });
+  })
+
 app.get(/\.(js)$/i, (req,res)=>{
     fs.readFile(startPath + req.originalUrl, (err, data) => {
           if (err||req.originalUrl === "/server.js") {
