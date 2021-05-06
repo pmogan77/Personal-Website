@@ -339,4 +339,12 @@ textarea {
     padding-left: 20px;
     padding-right: 0px;
   }
+
+  h3{
+    margin-top: 50px;
+  }
+}
+
+h3{
+  min-width: 130px;
 }
