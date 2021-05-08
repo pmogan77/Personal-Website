@@ -6,15 +6,15 @@ const url = require("url");
 var PORT = process.env.PORT || 3000;
 const startPath = `${__dirname}`;
 
-function requireHTTPS(req, res, next) {
-      // The 'x-forwarded-proto' check is for Heroku
-      if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
-        return res.redirect('https://' + req.get('host') + req.url);
-      }
-      next();
-}
+// function requireHTTPS(req, res, next) {
+//       // The 'x-forwarded-proto' check is for Heroku
+//       if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
+//         return res.redirect('https://' + req.get('host') + req.url);
+//       }
+//       next();
+// }
 
-app.use(requireHTTPS);
+// app.use(requireHTTPS);
 
 app.get(["/robots.txt","/robots"], (req,res)=>{
 
@@ -284,7 +284,7 @@ app.get(/\.(js)$/i, (req,res)=>{
     });
 })
 
-app.get(/\.(json)$/i, (req,res)=>{
+app.get(/\.(xml)$/i, (req,res)=>{
     fs.readFile(startPath + req.originalUrl, "utf-8", (err, data) => {
           if (err) {
                 console.log(err);
@@ -292,7 +292,7 @@ app.get(/\.(json)$/i, (req,res)=>{
           }
           else
           {
-                res.writeHead(200, { "Content-type": "application/json" });
+                res.writeHead(200, { "Content-type": "text/xml" });
                 res.end(data);
           }
     }); 
