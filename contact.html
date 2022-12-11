@@ -85,7 +85,7 @@
             <h1 style="color: #1b191c;">Contact()</h1>
             <h4 style="color: #1b191c;">Have any questions? Feel free to reach out to me.</h4>
 
-            <form onsubmit="sendEmail()">
+            <form>
                 <input type="text" class="name" placeholder="Name" required/>
                 <input type="email" class = "email" placeholder="Email" required/>
                 <br>
@@ -110,9 +110,9 @@
                     var message = document.querySelector('textarea').value;
 
                     Email.send({
-                        SecureToken: "1295ee99-0462-4566-b582-df946e1da981",
+                        SecureToken: "32a25143-b94a-4724-912b-c2302075dfcc",
                         To: "pmogan77@gmail.com",
-                        From: "pmogan77@gmail.com",
+                        From: "junkmail748596@gmail.com",
                         Subject: "Profile Message from: "+name,
                         Body: `Name: ${name} <br> Email: ${email} <br> Subject: ${subject} <br> Message: ${message}`
                     }).then(message =>{
