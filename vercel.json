@@ -1,15 +1,16 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ]
-  }
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/404", "destination": "/404.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "/projects", "destination": "/projects.html" },
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/skills", "destination": "/skills.html" },
+    { "source": "/eduportal", "destination": "eduportal.html" },
+    { "source": "/store", "destination": "store.html" },
+    { "source": "/medical", "destination": "/medical.html" },
+    { "source": "/vocab", "destination": "/vocab.css" },
+    { "source": "/covid", "destination": "/covid.html" }
+  ]
+}
